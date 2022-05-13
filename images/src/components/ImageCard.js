@@ -25,6 +25,7 @@ class ImageCard extends React.Component {
         return (
             <div style={{gridRowEnd: `span ${this.state.spans}`}}>
                 <img 
+                onClick={(e) => this.props.modalOpen(e.target.src)}
                 ref={this.imageRef}
                 alt={this.props.image.description} 
                 src={this.props.image.urls.regular} 
